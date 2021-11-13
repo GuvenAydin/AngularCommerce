@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
+import { Response } from 'src/app/Entities/Response';
 
 @Component({
   selector: 'app-home-trending-products',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-trending-products.component.css']
 })
 export class HomeTrendingProductsComponent implements OnInit {
+  response: Response;
 
-  constructor() { }
+  constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
+    this.productService.getProducts().subscribe((response) => {this.response = response});
   }
 
 }
