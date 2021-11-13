@@ -14,10 +14,18 @@ export class ProductItemComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  getStrikethroughClass() {
-    return {
-      'strikethrough-amount': this.product.discountedPrice
+  getDiscountedPercent() {
+    
+    if(this.product.discountedPrice){
+
+      var discount = this.product.regularPrice - this.product.discountedPrice;
+
+      var percent = (discount / this.product.regularPrice) * 100 ;
+
+      return percent.toFixed(1);
     }
+   
+    return 0;
   }  
 
 }
