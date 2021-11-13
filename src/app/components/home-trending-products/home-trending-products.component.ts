@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Response } from 'src/app/Entities/Response';
+import { Product } from 'src/app/Entities/Product';
 
 @Component({
   selector: 'app-home-trending-products',

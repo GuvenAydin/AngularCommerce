@@ -9,10 +9,15 @@ import { Response } from 'src/app/Entities/Response';
 })
 export class ProductItemComponent implements OnInit {
   @Input() product:Product;
-  @Input() response:Response;
 
   constructor() { }
 
   ngOnInit(): void {}
+
+  getStrikethroughClass() {
+    return {
+      'strikethrough-amount': this.product.discountedPrice
+    }
+  }  
 
 }
