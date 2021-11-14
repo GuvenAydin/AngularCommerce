@@ -3,13 +3,14 @@
             <img src="{{product.coverImageUrl}}" alt="#">
             <span class="sale-tag" *ngIf="product.discountedPrice">-{{ getDiscountedPercent() }} %</span>
             <div class="button">
-                <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                <a  class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
             </div>
         </div>
         <div class="product-info">
-            <span class="category">Watches</span>
+            <!-- <span class="category">Watches</span> -->
             <h4 class="title">
-                <a href="#">{{product.name}} </a>
+                <!-- <a [routerLink]="['/product', product.id]"  [queryParams]="{debug: true}">{{product.name}} </a> -->
+                <a [routerLink]="['/product', product.id]" >{{product.name}} </a>
             </h4>
             <ul class="review">
                 <li><i class="lni lni-star-filled"></i></li>

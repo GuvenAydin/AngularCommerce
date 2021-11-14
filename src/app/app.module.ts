@@ -17,10 +17,12 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { HomeTrendingProductsComponent } from './components/home-trending-products/home-trending-products.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
+import { SingleProductComponent } from './components/single-product/single-product.component';
 
 const appRoutes:Routes = [
   {path:'',component:HomeComponent},
   {path:'shop',component:ShopComponent},
+  {path:'product/:id',component:SingleProductComponent},
 ]
 
 @NgModule({
@@ -35,7 +37,8 @@ const appRoutes:Routes = [
     NavigationComponent,
     HomeTrendingProductsComponent,
     ShopComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    SingleProductComponent
   ],
   imports: [
     BrowserModule,
