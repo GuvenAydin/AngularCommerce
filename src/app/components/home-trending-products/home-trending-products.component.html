@@ -11,9 +11,9 @@
         </div>
 
 
-        <div class="row" *ngIf="response">
+        <div class="row" *ngIf="products">
            
-            <app-product-item *ngFor="let product of response.data" class="col-lg-3 col-md-6 col-12" [product] ="product" ></app-product-item>
+            <app-product-item *ngFor="let product of products.data" class="col-lg-3 col-md-6 col-12" [product] ="product" ></app-product-item>
 
         </div>
     </div>

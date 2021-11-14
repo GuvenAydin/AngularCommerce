@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
-import { Response } from 'src/app/Entities/Response';
-import { Product } from 'src/app/Entities/Product';
+import { Products } from 'src/app/Entities/Product';
 
 @Component({
   selector: 'app-home-trending-products',
@@ -9,12 +8,13 @@ import { Product } from 'src/app/Entities/Product';
   styleUrls: ['./home-trending-products.component.css']
 })
 export class HomeTrendingProductsComponent implements OnInit {
-  response: Response;
+  products: Products;
+  
 
   constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe((response) => {this.response = response});
+    this.productService.getProducts().subscribe((products) => {this.products = products});
   }
 
 }

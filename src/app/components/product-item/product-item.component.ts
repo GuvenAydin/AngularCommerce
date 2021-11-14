@@ -22,7 +22,7 @@ export class ProductItemComponent implements OnInit {
 
       var percent = (discount / this.product.regularPrice) * 100 ;
 
-      return percent.toFixed(1);
+      return percent.toFixed(0);
     }
    
     return 0;
