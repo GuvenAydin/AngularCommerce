@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders, HttpResponse } from '@angular/common/http';
 import {Observable} from 'rxjs'
-import { Product, Products } from '../Entities/Product';
-import { Response } from '../Entities/Response';
+import { ProductsResponse } from '../ResponseTypes/ProductsResponse';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -19,10 +18,10 @@ export class ProductService {
   
   constructor(private http:HttpClient) { }
 
-  products:Products
+  products:ProductsResponse
 
-  getProducts(): Observable<Products>{
-    return this.http.get<Products>(this.apiUrl);
+  getProducts(): Observable<ProductsResponse>{
+    return this.http.get<ProductsResponse>(this.apiUrl);
   }
 
 }

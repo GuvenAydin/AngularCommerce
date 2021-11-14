@@ -1,6 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { Product } from 'src/app/Entities/Product';
-import { Response } from 'src/app/Entities/Response';
 
 @Component({
   selector: 'app-product-item',
