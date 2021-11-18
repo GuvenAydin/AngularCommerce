@@ -7093,7 +7093,7 @@ blockquote span {
 }
 
 .register-form .button .btn {
-    width: 100%
+    width: 100%;
 }
 
 .register-form .outer-link {
@@ -8024,3 +8024,4 @@ blockquote span {
         display: none
     }
 }
+

@@ -1,4 +1,23 @@
-<section class="item-details section" *ngIf="product.data">
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="breadcrumbs-content">
+                    <h1 class="page-title" *ngIf="product && product.data" >{{product.data.name}}</h1>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <ul class="breadcrumb-nav">
+                    <li><a href="/"><i class="lni lni-home"></i> Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li *ngIf="product && product.data">{{product.data.name}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="item-details section" *ngIf="product && product.data">
     <div class="container">
         <div class="top-area">
             <div class="row align-items-center">
@@ -6,14 +25,17 @@
                     <div class="product-images">
                         <main id="gallery">
                             <div class="main-img">
-                                <img src="{{product.data.coverImageUrl}}"
-                                    id="current" alt="#">
+                                <img src="{{product.data.coverImageUrl}}" id="current" alt="#">
                             </div>
                             <div class="images">
-                                <img src="https://via.placeholder.com/335&text=Gallery_Image" class="img" alt="#" style="opacity: 1;">
-                                <img src="https://via.placeholder.com/335&text=Gallery_Image" class="img" alt="#" style="opacity: 1;">
-                                <img src="https://via.placeholder.com/335&text=Gallery_Image" class="img" alt="#" style="opacity: 1;">
-                                <img src="https://via.placeholder.com/335&text=Gallery_Image" class="img" alt="#" style="opacity: 1;">
+                                <img src="https://via.placeholder.com/335&text=Gallery_Image" class="img" alt="#"
+                                    style="opacity: 1;">
+                                <img src="https://via.placeholder.com/335&text=Gallery_Image" class="img" alt="#"
+                                    style="opacity: 1;">
+                                <img src="https://via.placeholder.com/335&text=Gallery_Image" class="img" alt="#"
+                                    style="opacity: 1;">
+                                <img src="https://via.placeholder.com/335&text=Gallery_Image" class="img" alt="#"
+                                    style="opacity: 1;">
                                 <img src="https://via.placeholder.com/335&text=Gallery_Image" class="img" alt="#"
                                     style="opacity: 0.6;">
                             </div>
@@ -25,8 +47,10 @@
                         <h2 class="title">{{product.data.name}}</h2>
                         <p class="category"><i class="lni lni-tag"></i> Drones:<a href="javascript:void(0)">Action
                                 cameras</a></p>
-                        <h3 class="price">€ {{product.data.regularPrice}}<span> € {{product.data.discountedPrice}}</span></h3>
+                        <h3 class="price">€ {{product.data.regularPrice}} <span *ngIf="product.data.discountedPrice"> €
+                                {{product.data.discountedPrice}}</span></h3>
                         <p class="info-text">{{product.data.description}}</p>
+
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <div class="form-group color-option">
@@ -95,7 +119,7 @@
                 </div>
             </div>
         </div>
-        <div class="product-details-info">
+        <!-- <div class="product-details-info">
             <div class="single-block">
                 <div class="row">
                     <div class="col-lg-6 col-12">
@@ -257,6 +281,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>

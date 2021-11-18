@@ -27,7 +27,6 @@ export class ProductService {
   }
 
   id:string;
-
   getProductById(id:Observable<string>): Observable<ProductResponse>{
 
     id.subscribe((id) => { this.id = id });

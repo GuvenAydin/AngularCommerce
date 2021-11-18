@@ -18,11 +18,13 @@ import { HomeTrendingProductsComponent } from './components/home-trending-produc
 import { ShopComponent } from './components/shop/shop.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { SingleProductComponent } from './components/single-product/single-product.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const appRoutes:Routes = [
   {path:'',component:HomeComponent},
   {path:'shop',component:ShopComponent},
   {path:'product/:id',component:SingleProductComponent},
+  {path:'register',component:RegisterComponent},
 ]
 
 @NgModule({
@@ -38,7 +40,8 @@ const appRoutes:Routes = [
     HomeTrendingProductsComponent,
     ShopComponent,
     ProductItemComponent,
-    SingleProductComponent
+    SingleProductComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
