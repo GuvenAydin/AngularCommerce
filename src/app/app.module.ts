@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import {RouterModule,Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -49,7 +50,8 @@ const appRoutes:Routes = [
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(appRoutes,{enableTracing:true}),
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
